@@ -12,6 +12,7 @@ document.querySelector('html').onclick = function() {
     alert('Hey! Stop it!');
 }
 var myImage = document.querySelector('img');
+var myBox = document.querySelector('');
 
 myImage.onclick = function() {
     var mySrc = myImage.getAttribute('src');
@@ -21,6 +22,14 @@ myImage.onclick = function() {
       myImage.setAttribute ('src','images/Computer-Guy-800px.png');
     }
 }
+
+myBox.onclick = function() {
+  var myText = myBox.getAttribute('src');
+  if(mySrc === '') {
+   document.setItem('',); 
+  }
+}
+
 function setUserName() {
   var myName = prompt('Please enter your name.');
   localStorage.setItem('name', myName);
